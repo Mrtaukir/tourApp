@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.ref-btn, .btn{
+.btn{
     position: relative;
     margin-top: 15px;
     padding: 11px 23px;
@@ -16,6 +15,7 @@
     font-weight: bold;
     cursor: pointer;
 }
+
 .btn::before{
     content: '';
     position: absolute;
@@ -33,6 +33,20 @@
     transform: scaleX(1);
 }
 
+.ref-btn{
+    position: relative;
+    margin-top: 15px;
+    padding: 11px 23px;
+    background-color: cadetblue;
+    color: rgb(34, 53, 224);
+    font-size: 15px;
+    /* box-shadow: -4 -5px -10px rgb(45, 44, 44); */
+    box-shadow: 4px 3px 10px rgb(45, 44, 44), -4px -3px 10px rgb(45,44,44) ;
+    z-index: 1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .ref-btn::before{
     content: '';
     position: absolute;
@@ -47,7 +61,9 @@
     transform: scaleX(1);
 }
 
-#tour-box:hover > :not(:hover){
-    opacity: 0.6;
-    filter: grayscale(1.2) blur(1.2px);
+@media screen and (min-width:1024px) {
+    #tour-box:hover > :not(:hover){
+        opacity: 0.6;
+        filter: grayscale(1.2) blur(1.2px);
+    }
 }
