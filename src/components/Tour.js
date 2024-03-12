@@ -1,8 +1,8 @@
 import Card from "./Card";
 export default function Tour({Tours,removeTour}){
     return (
-        <div>
-            <div className="w-[400px] mx-auto border-dashed border-[3px] border-black px-[15px] py-[7px] flex justify-center items-center">
+        <div className="overflow-hidden">
+            <div className="w-[300px] mx-auto border-dashed border-[3px] border-black px-[15px] py-[7px] flex justify-center items-center">
                 <h2 className="font-sans font-bold text-xl tracking-[1px] capitalize text-black select-none">Tour plan with Me</h2>
             </div>
             <div className="flex flex-wrap py-[10px] ">

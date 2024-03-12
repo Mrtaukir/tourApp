@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Card(props){
     const [readMore,setReadMore]=useState(false);
-    const description=readMore?props.info:`${props.info.substring(0,90)}....`;
+    const description=readMore?props.info:`${props.info.substring(0,78)}....`;
     function readMoreHandler(){
         setReadMore(!readMore);
     }
@@ -17,8 +17,8 @@ function Card(props){
                     <h4 className="text-xl text-gray-700 font-bold py-2">{props.price}</h4>
                 </div>
                 <div className="">
-                    {description}
-                    <span onClick={readMoreHandler} className="cursor-pointer text-xl text-slate-900">
+                    <p className="inline text-wrap text-[17.6px] text-black font-[500]">{description}</p>
+                    <span onClick={readMoreHandler} className="cursor-pointer text-xl text-slate-700 font-[500] ">
                         {readMore?`  show less`: `  read more`}
                     </span>
                 </div>
